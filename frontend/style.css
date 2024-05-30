@@ -1,0 +1,89 @@
+/* Style for the pdfList */
+#pdfList {
+    width: 0; /* Initial width of the pdfList */
+    height: 100vh;
+    background-color: #f0f0f0;
+    position: fixed;
+    top: 0;
+    left: 40px; /* Leave space for the hamburger menu */
+    transition: width 0.5s; /* Smooth transition for width change */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Hamburger menu button */
+#hamburgerMenu {
+    width: 40px;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100; /* Above the pdfList */
+    cursor: pointer;
+}
+
+#pdfList:hover, #pdfList.expanded {
+    width: 300px; /* Expanded width of the pdfList on hover */
+}
+
+/* Style for the pdfViewer and chatWidget */
+#pdfViewer, #chatWidget {
+    height: 100vh;
+    overflow: auto; /* Enable scrolling if content exceeds height */
+}
+
+#pdfViewer {
+    border-right: 1px solid #ccc; /* Add a solid border on the right side */
+    width: calc(50% - 40px); /* Adjust to accommodate the hamburger menu */
+    float: left;
+    margin-left: 40px; /* Ensure it starts after the hamburger menu */
+}
+
+#chatWidget {
+    width: 50%;
+    float: right;
+}
+
+/* Style for the placeholder */
+#placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#placeholder p {
+    font-size: 18px;
+    color: #888;
+}
+
+/* Style for the pdfList */
+#pdfList ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+}
+
+.pdf-item {
+    margin-bottom: 10px;
+}
+
+.pdf-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.pdf-button:hover {
+    background-color: #e0e0e0;
+}
+

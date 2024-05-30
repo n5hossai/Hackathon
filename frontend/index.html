@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hamburgerMenu"><span id="menuIcon">&#8694;</span></div>
+    <div id="pdfList">
+        <ul>
+            <li class="pdf-item" data-url="pdf_files/pdf1.pdf">
+                <button class="pdf-button" onclick="loadPDF('pdf_files/pdf1.pdf')">Document 1</button>
+            </li>
+            <li class="pdf-item" data-url="pdf_files/pdf2.pdf">
+                <button class="pdf-button" onclick="loadPDF('pdf_files/pdf2.pdf')">Document 2</button>
+            </li>
+            <!-- Add more list items for other documents -->
+        </ul>
+    </div>
+    
+    <div id="pdfViewer">
+        <div id="placeholder">
+            <p>Select a PDF document to view</p>
+        </div>
+    </div>
+    <div id="chatWidget">
+        <div id="chatContainer">
+            <div id="chatMessages"></div>
+            <input type="text" id="userInput" placeholder="Type a message...">
+            <button id="sendMessageBtn">Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
